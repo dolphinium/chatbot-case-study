@@ -27,3 +27,4 @@ After testing I decided to use <b>Cosine Similarity</b> as the similarity algori
 3. Run the chatbot using:
    ```bash
    python chatbot.py
+    ```

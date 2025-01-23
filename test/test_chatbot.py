@@ -65,17 +65,17 @@ def calculate_cosine_similarity(user_input, candidate):
     # Cosine similarity formula
     return dot_product / (user_magnitude * candidate_magnitude)
 
-def find_best_match(user_input, qa_data, threshold=0.5, use_cosine=False):
+def find_best_match(user_input, qa_data, threshold=0.1, use_cosine=False, top_n=3):
     """
-    Find the best match for the user input in the QA data.
+    Find the top N matches for the user input in the QA data.
     :param user_input: User's input string.
     :param qa_data: Dictionary of question-answer pairs.
     :param threshold: Minimum similarity ratio for a match.
     :param use_cosine: Whether to use cosine similarity (default False uses token-based).
-    :return: Best match string or None if no match is found.
+    :param top_n: Number of top matches to return.
+    :return: List of top N matches with similarity ratios.
     """
-    best_match = None
-    highest_similarity = 0
+    matches = []
 
     for question in qa_data.keys():
         if use_cosine:
@@ -83,17 +83,20 @@ def find_best_match(user_input, qa_data, threshold=0.5, use_cosine=False):
         else:
             similarity = calculate_similarity(user_input, question)
 
-        if similarity > highest_similarity and similarity >= threshold:
-            best_match = question
-            highest_similarity = similarity
+        if similarity >= threshold:
+            matches.append((question, similarity))
 
-    return best_match
+    # Sort matches by similarity in descending order
+    matches.sort(key=lambda x: x[1], reverse=True)
+
+    # Return top N matches
+    return matches[:top_n]
 
 def chatbot():
     """
     Run the chatbot.
     """
-    file_path = "chatbot_hr_discussion.json"  # Ensure the file exists in the same directory
+    file_path = "../chatbot_hr_discussion.json"  # Ensure the file exists in the same directory
     qa_data = load_data(file_path)
 
     if not qa_data:
@@ -108,10 +111,12 @@ def chatbot():
             print("Chatbot: Görüşmek üzere!")
             break
         
-        match = find_best_match(user_input, qa_data, use_cosine=True)  # Use cosine similarity
+        matches = find_best_match(user_input, qa_data, use_cosine=True, top_n=3)  # Use cosine similarity
 
-        if match:
-            print(f"Chatbot: {qa_data[match]}")
+        if matches:
+            print("Chatbot: İşte en benzer 3 cevap:")
+            for i, (question, similarity) in enumerate(matches):
+                print(f"{i+1}. {qa_data[question]} (Benzerlik: {similarity:.2f})")
         else:
             print("Chatbot: Bu konuda size yardımcı olamıyorum.")
 
