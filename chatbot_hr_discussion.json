@@ -1,0 +1,21 @@
+{
+    "Merhaba": "Merhaba, size nasıl yardımcı olabilirim?",
+    "Çalışma saatleriniz nedir?": "Çalışma saatlerimiz 09:00 - 18:00 arasındadır.",
+    "Adresiniz nedir?": "Adresimiz: ABC Mahallesi, XYZ Sokak, No:123.",
+    "Açık Pozisyonlar Nelerdir?": "AI Engineer, ML Engineer, Data Engineer, DL Engineer",
+    "Maaş aralığınız nedir?": "Hangi pozisyon için maaş aralığını soruyorsunuz?",
+    "AI Engineer maaş aralığı nedir?": "AI Engineer pozisyonu için maaş aralığı 15,000 - 25,000 TL arasındadır.",
+    "ML Engineer maaş aralığı nedir?": "ML Engineer pozisyonu için maaş aralığı 14,000 - 22,000 TL arasındadır.",
+    "Data Engineer maaş aralığı nedir?": "Data Engineer pozisyonu için maaş aralığı 13,000 - 20,000 TL arasındadır.",
+    "DL Engineer maaş aralığı nedir?": "DL Engineer pozisyonu için maaş aralığı 16,000 - 26,000 TL arasındadır.",
+    "İşe alım süreci nasıl işliyor?": "Önce bir telefon mülakatı yapıyoruz, ardından teknik bir değerlendirme süreci var.",
+    "Telefon mülakatında hangi sorular soruluyor?": "Telefon mülakatında genelde genel bilgi ve deneyimle ilgili sorular soruyoruz.",
+    "Teknik değerlendirme süreci nasıl?": "Teknik değerlendirme sürecinde bir test ve bir teknik mülakat yer alıyor.",
+    "Şirketinizin sunduğu yan haklar nelerdir?": "Yemek kartı, yol yardımı, sağlık sigortası gibi yan haklarımız bulunmaktadır.",
+    "Şirketinizin misyonu nedir?": "Şirketimizin misyonu, yapay zeka teknolojileri ile hayatı kolaylaştırmaktır.",
+    "Staj olanaklarınız var mı?": "Evet, yaz dönemlerinde stajyer kabul ediyoruz.",
+    "Staj süreci nasıl işliyor?": "Staj başvuruları bahar döneminde açılır ve bir değerlendirme sürecinden geçer.",
+    "Şirketinizde yükselme imkanları nelerdir?": "Performans değerlendirmeleriyle birlikte kariyer gelişim imkanları sunuyoruz.",
+    "Uzaktan çalışma imkanınız var mı?": "Evet, hibrit çalışma modelimiz bulunmaktadır.",
+    "Kariyer gelişim fırsatları sunuyor musunuz?": "Evet, düzenli eğitim programlarımız ve konferans katılım desteklerimiz var."
+}
