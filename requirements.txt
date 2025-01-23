@@ -1,1 +1,4 @@
-cdifflib
+scikit-learn
+nltk
+scipy
+matplotlib
